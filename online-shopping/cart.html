@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart | Sowmya Vastra's Online Shopping</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Sowmya <span>Vastralaya</span></a>
+      <button class="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cart.html" class="active">Cart</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="cart.html" class="cart-icon">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <h1>Your Shopping Cart</h1>
+    <p>Review your items and proceed to checkout</p>
+  </div>
+
+  <section class="section">
+    <div class="cart-container">
+      <div class="cart-items" id="cartItems">
+        <!-- Cart items rendered by JavaScript -->
+      </div>
+
+      <div class="cart-summary" id="cartSummary" style="display:none;">
+        <h3>Order Summary</h3>
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="subtotal">₹0</span>
+        </div>
+        <div class="summary-row">
+          <span>Shipping</span>
+          <span id="shipping">₹0</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total</span>
+          <span id="total">₹0</span>
+        </div>
+        <button class="btn checkout-btn" onclick="checkout()">
+          <i class="fas fa-lock"></i> Proceed to Checkout
+        </button>
+        <p style="text-align:center;margin-top:1rem;font-size:0.85rem;color:var(--text-light);">
+          Free shipping on orders above ₹999
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h4>Sowmya Vastralaya</h4>
+        <p>Your trusted destination for elegant fashion and quality products. Shop with confidence.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="products.html">Products</a></p>
+        <p><a href="about.html">About Us</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </div>
+      <div>
+        <h4>Customer Care</h4>
+        <p><a href="cart.html">My Cart</a></p>
+        <p><a href="contact.html">Help Centre</a></p>
+        <p>Track Order</p>
+        <p>Return Policy</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📧 support@sowmya.com</p>
+        <p>📞 +91 98765 43210</p>
+        <p>📍 Hyderabad, India</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Sowmya Vastralaya's Online Shopping. All rights reserved. 
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

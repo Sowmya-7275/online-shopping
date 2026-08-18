@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Sowmya Vastra's Online Shopping</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Sowmya <span>Vastralaya</span></a>
+      <button class="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="cart.html" class="cart-icon">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Slider -->
+  <section class="slider-section">
+    <div class="slides">
+      <div class="slide">
+        <img src="images/slide1.png" alt="Fashion Collection">
+        <div class="slide-content">
+          <h1>Discover Your Style</h1>
+          <p>Elegant fashion curated by Sowmya Vastralaya — where tradition meets modern trends.</p>
+          <a href="products.html" class="btn">Shop Now</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="images/slide2.png" alt="New Arrivals">
+        <div class="slide-content">
+          <h1>New Arrivals 2026</h1>
+          <p>Fresh collections just for you. Premium quality at affordable prices.</p>
+          <a href="products.html" class="btn">Explore Collection</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="images/slide3.png" alt="Special Offers">
+        <div class="slide-content">
+          <h1>Special Offers</h1>
+          <p>Up to 40% off on selected items. Limited time only — don't miss out!</p>
+          <a href="products.html" class="btn">View Deals</a>
+        </div>
+      </div>
+    </div>
+    <button class="slider-arrow prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+    <button class="slider-arrow next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+    <div class="slider-nav">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="section">
+    <div class="section-title">
+      <h2>Featured Products</h2>
+      <p>Handpicked favourites from our latest collection</p>
+      <div class="underline"></div>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-img">
+          <span class="product-badge">New</span>
+          <img src="images/summer.jpg" alt="Elegant Dress">
+        </div>
+        <div class="product-info">
+          <h3>Elegant Summer Dress</h3>
+          <p class="category">Women's Fashion</p>
+          <div class="price-row">
+            <span class="price">₹1,899 <del>₹2,499</del></span>
+            <button class="add-btn" onclick="addToCart('p1','Elegant Summer Dress',1899,'images/summer.jpg')" title="Add to cart">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img">
+          <img src="images/floral.jpg" alt="Casual Top">
+        </div>
+        <div class="product-info">
+          <h3>Floral Casual Top</h3>
+          <p class="category">Women's Fashion</p>
+          <div class="price-row">
+            <span class="price">₹999 <del>₹1,299</del></span>
+            <button class="add-btn" onclick="addToCart('p2','Floral Casual Top',999,'images/floral.jpg')" title="Add to cart">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img">
+          <span class="product-badge">Bestseller</span>
+          <img src="images/tradkurti.jpg" alt="Designer Wear">
+        </div>
+        <div class="product-info">
+          <h3>Designer Ethnic Wear</h3>
+          <p class="category">Ethnic Wear</p>
+          <div class="price-row">
+            <span class="price">₹2,499</span>
+            <button class="add-btn" onclick="addToCart('p3','Designer Ethnic Wear',2499,'images/tradkurti.jpg')" title="Add to cart">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img">
+          <img src="images/party.jpg" alt="Party Outfit">
+        </div>
+        <div class="product-info">
+          <h3>Party Ready Outfit</h3>
+          <p class="category">Party Wear</p>
+          <div class="price-row">
+            <span class="price">₹3,299 <del>₹3,999</del></span>
+            <button class="add-btn" onclick="addToCart('p4','Party Ready Outfit',3299,'images/party.jpg')" title="Add to cart">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="products.html" class="btn">View All Products</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" style="padding-top:0;">
+    <div class="section-title">
+      <h2>Why Shop With Us</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="features">
+      <div class="feature-card">
+        <div class="feature-icon">🚚</div>
+        <h3>Free Shipping</h3>
+        <p>On orders above ₹999 across India</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔄</div>
+        <h3>Easy Returns</h3>
+        <p>7-day hassle-free return policy</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>Secure Payment</h3>
+        <p>100% safe & encrypted transactions</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>24/7 Support</h3>
+        <p>We're always here to help you</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h4>Sowmya Vastralaya</h4>
+        <p>Your trusted destination for elegant fashion and quality products. Shop with confidence.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="products.html">Products</a></p>
+        <p><a href="about.html">About Us</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </div>
+      <div>
+        <h4>Customer Care</h4>
+        <p><a href="cart.html">My Cart</a></p>
+        <p><a href="contact.html">Help Centre</a></p>
+        <p>Track Order</p>
+        <p>Return Policy</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📧 support@sowmya.com</p>
+        <p>📞 +91 98765 43210</p>
+        <p>📍 Hyderabad, India</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Sowmya Vastralaya Online Shopping. All rights reserved. 
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Sowmya Lakshmi's Online Shopping</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Sowmya <span>Vastralaya</span></a>
+      <button class="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="cart.html" class="cart-icon">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <h1>Our Collection</h1>
+    <p>Discover elegant traditional and fashion pieces carefully selected for you</p>
+  </div>
+
+  <section class="section">
+    <div class="filter-bar">
+      <div class="filter-btns">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="women">Women's</button>
+        <button class="filter-btn" data-filter="ethnic">Ethnic</button>
+        <button class="filter-btn" data-filter="party">Party Wear</button>
+        <button class="filter-btn" data-filter="accessories">Accessories</button>
+      </div>
+    </div>
+
+    <div class="products-grid">
+      <!-- Product 1 -->
+      <div class="product-card" data-category="women">
+        <div class="product-img">
+          <span class="product-badge">New</span>
+          <img src="images/summer.jpg" alt="Elegant Summer Dress">
+        </div>
+        <div class="product-info">
+          <h3>Elegant Summer Dress</h3>
+          <p class="category">Women's Fashion</p>
+          <div class="price-row">
+            <span class="price">₹1,899 <del>₹2,499</del></span>
+            <button class="add-btn" onclick="addToCart('p1','Elegant Summer Dress',1899,'images/summer.jpg')">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card" data-category="women">
+        <div class="product-img">
+          <img src="images/floral.jpg" alt="Floral Casual Top">
+        </div>
+        <div class="product-info">
+          <h3>Floral Casual Top</h3>
+          <p class="category">Women's Fashion</p>
+          <div class="price-row">
+            <span class="price">₹999 <del>₹1,299</del></span>
+            <button class="add-btn" onclick="addToCart('p2','Floral Casual Top',999,'images/floral.jpg')">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card" data-category="ethnic">
+        <div class="product-img">
+          <span class="product-badge">Bestseller</span>
+          <img src="images/kurti.jpg" alt="Designer Ethnic Wear">
+        </div>
+        <div class="product-info">
+          <h3>Designer Ethnic Wear</h3>
+          <p class="category">Ethnic Wear</p>
+          <div class="price-row">
+            <span class="price">₹2,499</span>
+            <button class="add-btn" onclick="addToCart('p3','Designer Ethnic Wear',2499,'images/kurti.jpg')">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card" data-category="party">
+        <div class="product-img">
+          <img src="images/party.jpg" alt="Party Ready Outfit">
+        </div>
+        <div class="product-info">
+          <h3>Party Ready Outfit</h3>
+          <p class="category">Party Wear</p>
+          <div class="price-row">
+            <span class="price">₹3,299 <del>₹3,999</del></span>
+            <button class="add-btn" onclick="addToCart('p4','Party Ready Outfit',3299,'images/party.jpg')">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extra products using same images with variation -->
+      <div class="product-card" data-category="ethnic">
+        <div class="product-img">
+          <img src="images/tradkurti.jpg" alt="Traditional Kurti Set">
+        </div>
+        <div class="product-info">
+          <h3>Traditional Kurti Set</h3>
+          <p class="category">Ethnic Wear</p>
+          <div class="price-row">
+            <span class="price">₹1,799 <del>₹2,199</del></span>
+            <button class="add-btn" onclick="addToCart('p5','Traditional Kurti Set',1799,'images/tradkurti.jpg')">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="women">
+        <div class="product-img">
+          <span class="product-badge">Sale</span>
+          <img src="images/cotton.jpg" alt="Cotton Maxi Dress">
+        </div>
+        <div class="product-info">
+          <h3>Cotton Maxi Dress</h3>
+          <p class="category">Women's Fashion</p>
+          <div class="price-row">
+            <span class="price">₹1,499 <del>₹1,999</del></span>
+            <button class="add-btn" onclick="addToCart('p6','Cotton Maxi Dress',1499,'images/cotton.jpg')">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="party">
+        <div class="product-img">
+          <img src="images/even.jpg" alt="Evening Gown">
+        </div>
+        <div class="product-info">
+          <h3>Evening Gown</h3>
+          <p class="category">Party Wear</p>
+          <div class="price-row">
+            <span class="price">₹4,599</span>
+            <button class="add-btn" onclick="addToCart('p7','Evening Gown',4599,'images/even.jpg')">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="accessories">
+        <div class="product-img">
+          <img src="images/scarf.jpg" alt="Stylish Scarf">
+        </div>
+        <div class="product-info">
+          <h3>Stylish Printed Scarf</h3>
+          <p class="category">Accessories</p>
+          <div class="price-row">
+            <span class="price">₹499</span>
+            <button class="add-btn" onclick="addToCart('p8','Stylish Printed Scarf',499,'images/scarf.jpg')">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card" data-category="ethnic">
+        <div class="product-img">
+          <img src="images/mar.jpg" alt="Wedding Outfit ">
+        </div>
+        <div class="product-info">
+          <h3>Wedding Outfit</h3>
+          <p class="category">Ethnic Wear</p>
+          <div class="price-row">
+            <span class="price">₹50,799 <del>₹1,00,199</del></span>
+            <button class="add-btn" onclick="addToCart('p5','Wedding Outfit',50799,'images/mar.jpg')">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card" data-category="ethnic">
+        <div class="product-img">
+          <img src="images/leh.jpg" alt="Reception Outfit">
+        </div>
+        <div class="product-info">
+          <h3>Reception Outfit</h3>
+          <p class="category">Ethnic Wear</p>
+          <div class="price-row">
+            <span class="price">₹10,799 <del>₹20,199</del></span>
+            <button class="add-btn" onclick="addToCart('p5','Reception Outfit',1799,'images/leh.jpg')">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card" data-category="accessories">
+        <div class="product-img">
+          <img src="images/hair.jpg" alt="Hair Accessories ">
+        </div>
+        <div class="product-info">
+          <h3>Hair Accessories</h3>
+          <p class="category">Accessories</p>
+          <div class="price-row">
+            <span class="price">₹299</span>
+            <button class="add-btn" onclick="addToCart('p8','Hair Accessories',299,'images/hair.jpg')">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card" data-category="accessories">
+        <div class="product-img">
+          <img src="images/chain.jpg" alt="Aesthatic Chains ">
+        </div>
+        <div class="product-info">
+          <h3>Aesthatic Chains</h3>
+          <p class="category">Accessories</p>
+          <div class="price-row">
+            <span class="price">₹599</span>
+            <button class="add-btn" onclick="addToCart('p8','Aesthatic Chains',599,'images/chain.jpg')">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h4>Sowmya Vastralaya</h4>
+        <p>Your trusted destination for elegant fashion and quality products. Shop with confidence.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="products.html">Products</a></p>
+        <p><a href="about.html">About Us</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </div>
+      <div>
+        <h4>Customer Care</h4>
+        <p><a href="cart.html">My Cart</a></p>
+        <p><a href="contact.html">Help Centre</a></p>
+        <p>Track Order</p>
+        <p>Return Policy</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📧 support@sowmya.com</p>
+        <p>📞 +91 98765 43210</p>
+        <p>📍 Hyderabad, India</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Sowmya Vastralaya's Online Shopping. All rights reserved. 
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
